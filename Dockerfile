@@ -1,4 +1,4 @@
-FROM debian:testing
+FROM debian:stable
 MAINTAINER Johan Lundberg <lundberg@sunet.se>
 
 RUN apt-get update && \
@@ -12,6 +12,10 @@ RUN apt-get update && \
       libpq-dev \
       libffi-dev \
       python3-dev \
+      libxml2-dev \
+      libxslt1-dev \
+      xmlsec1 \
+      libxml2-utils \
     && apt-get clean
 
 RUN git clone --single-branch --branch release https://github.com/SUNET/ni.git /opt/ni
