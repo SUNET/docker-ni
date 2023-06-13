@@ -1,4 +1,4 @@
-FROM debian:stable
+FROM debian:bullseye
 MAINTAINER Johan Lundberg <lundberg@sunet.se>
 
 RUN apt-get update && \
